@@ -1,3 +1,0 @@
-https://github.com/firecomputer/sangmyeong_python_programming/blob/main/Kim%20Jaeheyon/inchTocm.py
-https://github.com/firecomputer/sangmyeong_python_programming/blob/main/Kim%20Jaeheyon/kgToPound.py
-https://github.com/firecomputer/sangmyeong_python_programming/blob/main/Kim%20Jaeheyon/CircleCal.py
