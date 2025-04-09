@@ -12,7 +12,7 @@ elif mode == 2:
     firstNum = int(input("*** 첫번째 숫자를 입력하세요 : "))
     secondNum = int(input("*** 두번째 숫자를 입력하세요 : "))
     result = 0
-    for i in range(firstNum, secondNum):
+    for i in range(firstNum, secondNum+1):
         result += i
     print(f"{firstNum}+...+{secondNum}는 {result}입니다.")
 
