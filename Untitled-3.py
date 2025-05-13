@@ -40,8 +40,6 @@ btnNext = Button(window, text = '다음 >>', command = clickNext)
 
 photo = PhotoImage(file = 'gif/'+ fnameList[0])
 pLabel = Label(window, image = photo)
-def fname():
-    print('gif')
     
 pImage = Label(window, text = fnameList[0])
 
