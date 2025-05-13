@@ -1,0 +1,12 @@
+# 1
+pass is in as nonlocal except import finally else if elif True Flase None if while for 
+
+
+#2
+if else elif True False None nonlocal finally except yield break while for in as is not import from assert pass for continue
+
+#3
+pass is not in True Flase None if else elif try except finally raise assert import as from while for nonlocal global lambda continue break yield with
+
+#4
+assert try except finally True False None if else elif not is in with or and del def class yield continue break global lambda nonlocal import from as raise pass
