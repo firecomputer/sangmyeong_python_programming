@@ -1,27 +1,53 @@
 from tkinter import *
-from random import shuffle
+from time import *
+
 ## 전역 변수 선언 부분 ##
-btnList = [None]*9
 fnameList = ['cat1.gif', 'cat2.gif', 'cat3.gif', 'cat4.gif', 'cat5.gif', 'cat6.gif',
              'cat7.gif', 'cat8.gif', 'cat9.gif']
 photoList = [None]*9
-i, k = 0, 0
-xPos, yPos = 0, 0
 num = 0
+
+## 함수 선언 부분 ##
+def clickNext():
+    global num
+    num +=1
+    if num > 8:
+        num = 0
+    photo = PhotoImage(file = 'gif/'+ fnameList[num])
+    pImage.configure(text = fnameList[num])
+    pLabel.configure(image = photo)
+    pLabel.image = photo
+    pImage.text = fnameList[num]
+
+def clickPrev():
+    global num
+    num -= 1
+    if num <0:
+        num = 8
+    photo = PhotoImage(file = 'gif/'+ fnameList[num])
+    pLabel.configure(image = photo)
+    pImage.configure(text = fnameList[num])
+    pLabel.image = photo
+    pImage.text = fnameList[num]
 
 ## 메인 코드 부분 ##
 window = Tk()
-window.geometry("256x256")
-shuffle(fnameList)
-for i in range(0, 9):
-    photoList[i] = PhotoImage(file = 'gif/'+ fnameList[i])
-    btnList[i] = Button(window, image = photoList[i])
-for i in range(0,3):
-    for k in range(0,3):
-        btnList[num].place(x = xPos, y = yPos)
-        num +=1
-        xPos += 70
-    xPos = 0
-    yPos += 70
+window.geometry("700x500")
+window.title("사진 앨범 보기")
+
+btnPrev = Button(window, text = "<< 이전", command = clickPrev)
+btnNext = Button(window, text = '다음 >>', command = clickNext)
+
+photo = PhotoImage(file = 'gif/'+ fnameList[0])
+pLabel = Label(window, image = photo)
+def fname():
+    print('gif')
+    
+pImage = Label(window, text = fnameList[0])
+
+btnPrev.place(x = 250, y = 10)
+btnNext.place(x = 400, y = 10)
+pLabel.place(x = 15, y = 50)
+pImage.place(x = 325, y = 10)
 
 window.mainloop()
