@@ -1,0 +1,9 @@
+inFp = None
+inStr = ""
+
+inFp = open("C:\Users\박재혁\Desktop\sangmyeong_python_programming\filetest\data1.txt", "r")
+
+inList = inFp.readLines()
+print(inList)
+
+inFp.close()
