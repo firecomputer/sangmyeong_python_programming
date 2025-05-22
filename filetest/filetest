@@ -1,0 +1,15 @@
+inFp = None
+inStr = ""
+
+inFp = open("C:\Users\박재혁\Desktop\sangmyeong_python_programming\filetest\data1.txt", "r")
+
+inStr = inFp.readline()
+print(inStr, end = "")
+
+inStr = inFp.readLine()
+print(inStr, end = "")
+
+inStr = inFp.readLine()
+print(inStr, end = "")
+
+inFp.close()

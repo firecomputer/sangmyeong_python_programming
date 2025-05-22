@@ -1,0 +1,15 @@
+inFp = None
+inStr = ""
+
+inFp = open("C:\\Users\\박재혁\\Desktop\\sangmyeong_python_programming\\filetest\\data1.txt", "r", encoding='UTF8')
+
+i = 0
+
+while True:
+    i += 1
+    inStr = inFp.readline()
+    if inStr == "":
+        break;
+    print("%d: %s" % (i, inStr),end ="")
+
+inFp.close()
